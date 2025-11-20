@@ -7,20 +7,20 @@
 
 :root {
   /* Color Variables - Dark Mode Only */
-  --background: hsl(267, 64%, 6%);
+  --background: hsl(267, 64%, 24%);
   --foreground: hsl(270, 10%, 95%);
-  --border: hsl(267, 50%, 15%);
-  --card: hsl(267, 60%, 10%);
+  --border: hsl(267, 50%, 35%);
+  --card: hsl(267, 60%, 28%);
   --card-foreground: hsl(270, 10%, 95%);
-  --card-border: hsl(267, 55%, 18%);
-  --primary: hsl(266, 57%, 24%);
+  --card-border: hsl(267, 55%, 38%);
+  --primary: hsl(253, 47%, 42%);
   --primary-foreground: hsl(270, 10%, 98%);
-  --secondary: hsl(267, 50%, 12%);
+  --secondary: hsl(267, 50%, 35%);
   --secondary-foreground: hsl(270, 10%, 95%);
-  --muted: hsl(267, 45%, 14%);
-  --muted-foreground: hsl(270, 10%, 65%);
+  --muted: hsl(267, 45%, 32%);
+  --muted-foreground: hsl(270, 10%, 75%);
   --accent: hsl(75, 100%, 60%);
-  --accent-foreground: hsl(267, 64%, 6%);
+  --accent-foreground: hsl(267, 64%, 20%);
   
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
@@ -51,7 +51,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom right, hsla(266, 80%, 40%, 0.3), var(--background), hsla(266, 80%, 45%, 0.15));
+  background: linear-gradient(to bottom right, hsla(253, 47%, 42%, 0.3), var(--background), hsla(253, 47%, 50%, 0.15));
   z-index: -2;
   pointer-events: none;
 }
@@ -72,28 +72,43 @@ body {
   width: 384px;
   height: 384px;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(80px) brightness(1.2);
 }
 
 .orb-1 {
   top: -192px;
   left: -192px;
-  background-color: hsla(266, 80%, 45%, 0.4);
-  animation: pulse 4s ease-in-out infinite;
+  background-color: hsla(253, 47%, 42%, 0.4);
+  box-shadow: 
+    0 0 100px hsla(253, 47%, 42%, 0.6),
+    0 0 200px hsla(253, 47%, 42%, 0.4),
+    0 0 300px hsla(253, 47%, 42%, 0.3),
+    0 0 400px hsla(253, 47%, 42%, 0.2);
+  animation: pulseGlow 4s ease-in-out infinite;
 }
 
 .orb-2 {
   top: 50%;
   right: 0;
-  background-color: hsla(266, 80%, 45%, 0.4);
-  animation: pulse 4s ease-in-out infinite 1s;
+  background-color: hsla(253, 47%, 42%, 0.4);
+  box-shadow: 
+    0 0 100px hsla(253, 47%, 42%, 0.6),
+    0 0 200px hsla(253, 47%, 42%, 0.4),
+    0 0 300px hsla(253, 47%, 42%, 0.3),
+    0 0 400px hsla(253, 47%, 42%, 0.2);
+  animation: pulseGlow 4s ease-in-out infinite 1s;
 }
 
 .orb-3 {
   bottom: -192px;
   left: 33.33%;
-  background-color: hsla(266, 80%, 50%, 0.35);
-  animation: pulse 4s ease-in-out infinite 2s;
+  background-color: hsla(253, 47%, 42%, 0.35);
+  box-shadow: 
+    0 0 100px hsla(253, 47%, 42%, 0.5),
+    0 0 200px hsla(253, 47%, 42%, 0.35),
+    0 0 300px hsla(253, 47%, 42%, 0.25),
+    0 0 400px hsla(253, 47%, 42%, 0.15);
+  animation: pulseGlow 4s ease-in-out infinite 2s;
 }
 
 @keyframes pulse {
@@ -104,6 +119,19 @@ body {
   50% {
     opacity: 0.8;
     transform: scale(1.05);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(80px) brightness(1.2);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+    filter: blur(90px) brightness(1.4);
   }
 }
 
