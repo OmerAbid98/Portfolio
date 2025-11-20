@@ -13,7 +13,7 @@
   --card: hsl(267, 60%, 10%);
   --card-foreground: hsl(270, 10%, 95%);
   --card-border: hsl(267, 55%, 18%);
-  --primary: hsl(267, 70%, 55%);
+  --primary: hsl(266, 57%, 24%);
   --primary-foreground: hsl(270, 10%, 98%);
   --secondary: hsl(267, 50%, 12%);
   --secondary-foreground: hsl(270, 10%, 95%);
@@ -51,7 +51,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom right, hsla(267, 70%, 55%, 0.25), var(--background), hsla(267, 70%, 60%, 0.12));
+  background: linear-gradient(to bottom right, hsla(266, 80%, 40%, 0.3), var(--background), hsla(266, 80%, 45%, 0.15));
   z-index: -2;
   pointer-events: none;
 }
@@ -78,21 +78,21 @@ body {
 .orb-1 {
   top: -192px;
   left: -192px;
-  background-color: hsla(267, 70%, 55%, 0.3);
+  background-color: hsla(266, 80%, 45%, 0.4);
   animation: pulse 4s ease-in-out infinite;
 }
 
 .orb-2 {
   top: 50%;
   right: 0;
-  background-color: hsla(267, 70%, 55%, 0.3);
+  background-color: hsla(266, 80%, 45%, 0.4);
   animation: pulse 4s ease-in-out infinite 1s;
 }
 
 .orb-3 {
   bottom: -192px;
   left: 33.33%;
-  background-color: hsla(267, 70%, 55%, 0.25);
+  background-color: hsla(266, 80%, 50%, 0.35);
   animation: pulse 4s ease-in-out infinite 2s;
 }
 
