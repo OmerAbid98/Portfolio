@@ -7,20 +7,20 @@
 
 :root {
   /* Color Variables - Dark Mode Only */
-  --background: hsl(267, 64%, 12%);
+  --background: hsl(267, 64%, 6%);
   --foreground: hsl(270, 10%, 95%);
-  --border: hsl(267, 50%, 22%);
-  --card: hsl(267, 60%, 16%);
+  --border: hsl(267, 50%, 15%);
+  --card: hsl(267, 60%, 10%);
   --card-foreground: hsl(270, 10%, 95%);
-  --card-border: hsl(267, 55%, 25%);
-  --primary: hsl(253, 47%, 42%);
+  --card-border: hsl(267, 55%, 18%);
+  --primary: hsl(267, 70%, 55%);
   --primary-foreground: hsl(270, 10%, 98%);
-  --secondary: hsl(267, 50%, 20%);
+  --secondary: hsl(267, 50%, 12%);
   --secondary-foreground: hsl(270, 10%, 95%);
-  --muted: hsl(267, 45%, 18%);
-  --muted-foreground: hsl(270, 10%, 70%);
+  --muted: hsl(267, 45%, 14%);
+  --muted-foreground: hsl(270, 10%, 65%);
   --accent: hsl(75, 100%, 60%);
-  --accent-foreground: hsl(267, 64%, 10%);
+  --accent-foreground: hsl(267, 64%, 6%);
   
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
@@ -51,7 +51,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom right, hsla(253, 47%, 42%, 0.3), var(--background), hsla(253, 47%, 50%, 0.15));
+  background: linear-gradient(to bottom right, hsla(267, 70%, 55%, 0.25), var(--background), hsla(267, 70%, 60%, 0.12));
   z-index: -2;
   pointer-events: none;
 }
@@ -78,21 +78,21 @@ body {
 .orb-1 {
   top: -192px;
   left: -192px;
-  background-color: hsla(253, 47%, 42%, 0.35);
+  background-color: hsla(267, 70%, 55%, 0.3);
   animation: pulse 4s ease-in-out infinite;
 }
 
 .orb-2 {
   top: 50%;
   right: 0;
-  background-color: hsla(253, 47%, 42%, 0.35);
+  background-color: hsla(267, 70%, 55%, 0.3);
   animation: pulse 4s ease-in-out infinite 1s;
 }
 
 .orb-3 {
   bottom: -192px;
   left: 33.33%;
-  background-color: hsla(253, 47%, 42%, 0.3);
+  background-color: hsla(267, 70%, 55%, 0.25);
   animation: pulse 4s ease-in-out infinite 2s;
 }
 
